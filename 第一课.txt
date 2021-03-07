@@ -1,0 +1,12 @@
+select
+concat('SELECT ''',TABLE_NAME ,'''  , count(1) CT , ''' ,
+ COLUMN_NAME  ,  ''' COL FROM ',TABLE_SCHEMA,'.',TABLE_NAME ,' WHERE ',COLUMN_NAME ,'=''10001'' limit 1  UNION ALL ')  QT
+from COLUMNS where TABLE_SCHEMA='employees'  ;
+
+
+desc table;   查看表结构，用于写SQL
+
+show create table  tb_name\G;  查看表结构
+
+show table status like 'tb_name';   查看表物理IO大小
+
